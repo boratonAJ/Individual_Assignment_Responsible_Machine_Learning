@@ -7,6 +7,7 @@ This repository contains assignments and analysis for the Responsible Machine Le
 ## 2. Python Libraries Used
 
 The following Python libraries are used throughout the analysis:
+
 - pandas
 - numpy
 - matplotlib
@@ -14,6 +15,11 @@ The following Python libraries are used throughout the analysis:
 - statsmodels
 - patsy
 - scikit-learn
+- dice-ml
+- shap
+- lime
+
+--------------------------------
 
 ## Assignment 1 Folder
 
