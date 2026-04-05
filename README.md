@@ -65,7 +65,7 @@ To reproduce the results in this repository:
 2. Ensure you have Python 3.8 or higher installed.
 3. Install the required libraries using pip:
 	```bash
-	pip install pandas numpy matplotlib seaborn statsmodels patsy scikit-learn
+	pip install pandas numpy matplotlib seaborn statsmodels patsy scikit-learn lifelines lime dice_ml shap solas_ai
 	```
 4. Open the relevant Jupyter notebooks (`.ipynb` files) in your preferred environment (e.g., JupyterLab, VS Code, or Google Colab).
 5. Run the cells in order to reproduce the analysis and results.
