@@ -4,6 +4,15 @@
 
 This repository contains assignments and analysis for the Responsible Machine Learning (RML) course. The main purpose of the analysis is to explore, implement, and evaluate responsible and ethical practices in machine learning, including fairness, transparency, and bias mitigation in predictive models.
 
+## Quick Start
+
+- Clone this repository locally.
+- Create and activate a Conda environment with Python 3.11.
+- Install dependencies from the reproducibility section in this README.
+- Register/select the `Python (chat-env)` Jupyter kernel.
+- Open a notebook and run cells in order from top to bottom.
+- If installation fails, check the compatibility notes before changing package versions.
+
 ## 2. Python Libraries Used
 
 The following Python libraries are used throughout the analysis:
@@ -71,3 +80,42 @@ To reproduce the results in this repository:
 5. Run the cells in order to reproduce the analysis and results.
 
 If you encounter any issues or missing packages, please refer to the notebook's first cell or requirements section for additional dependencies.
+
+-------------------------------------------
+
+## 4. Reproducibility Caution (Tested Environments and Compatibility)
+
+To help others run `Assignment_3/Individual_Homework_3.ipynb` without dependency errors, use the tested setup below.
+
+### What was tested
+
+- System Python: 3.10.19
+- Anaconda `base`: Python 3.13.x
+- Anaconda `chat-env`: Python 3.11.11
+
+### Compatibility notes
+
+- `lifelines==0.30.3` requires Python >= 3.11.
+	- Fails on Python 3.10.
+- `solas-ai` did not resolve in the tested Python 3.13 kernel (`base`).
+	- Worked in Python 3.11 (`chat-env`).
+- `pydantic==1.10.26` is pinned for assignment compatibility and may differ from newer default environments.
+
+### Recommended reproducible setup (Anaconda)
+
+Use a Python 3.11 Conda environment and run the notebook with that kernel:
+
+```bash
+conda create -n chat-env python=3.11 -y
+conda activate chat-env
+python -m pip install --upgrade pip
+python -m pip install solas-ai lifelines==0.30.3 pydantic==1.10.26 --force-reinstall lime dice_ml shap
+python -m pip install ipykernel
+python -m ipykernel install --user --name chat-env --display-name "Python (chat-env)"
+```
+
+Then, in Jupyter or VS Code, select the `Python (chat-env)` kernel before running notebook cells.
+
+### Why this caution matters
+
+Small version changes (especially Python minor version and fairness/XAI package versions) can change install behavior or break imports. For reproducible grading and analysis outputs, keep the environment close to the tested matrix above.
